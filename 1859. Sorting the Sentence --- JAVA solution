@@ -1,0 +1,25 @@
+class Solution {
+    public String sortSentence(String s) {
+        StringBuilder k = new StringBuilder();
+        k.append(s);
+        k.reverse();
+        String rev= k.toString();
+        String strarr[]= rev.split("\\W+");
+        Arrays.sort(strarr);
+        String res="";
+        for(int i=0;i<strarr.length;i++)
+        {
+            res+=strarr[i].substring(1,strarr[i].length())+' ';
+        }
+        String strar[]=res.split("\\W+");
+        res="";
+        k.setLength(0);
+        for(int i=0;i<strar.length;i++)
+        {
+            k.append(strar[i]);
+            res+=k.reverse()+" ";
+            k.setLength(0);
+        }
+        return res.trim();
+    }
+}
