@@ -21,3 +21,15 @@ class Solution {
        return false;
        }    
 }
+
+
+
+APPROACH:
+1. Just compare both the strings for the same indices.
+    for eg: s1 = "bank", s2 = "kanb"    check 'b' and 'k' simultaneously, 'a' and 'a' etc.
+2. If they are equal count them .
+3. if they are not equal store the index of unequal characters in a array.
+4. The size of array should be 2, if size exceeds 2 then return false.
+5. Finally check if the non equal characters are equal if they are return true else false.
+
+                                  You are done!
